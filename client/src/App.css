@@ -501,7 +501,7 @@ header  .part3 .circle svg {
 .homeCat .swiper .item{padding: 15px; width: 100px; height: auto; background: #feefea; border-radius: 10px;}
 .homeCat .swiper .item img{width: 80%;}
 .homeCat .swiper-button-prev,
-.homeCat .swiper-button-next {top: -30px !important; width: 30px !important;height: 30px !important;font-size: 12px; 
+.homeCat .swiper-button-next {top: -24px !important; width: 30px !important;height: 30px !important;font-size: 12px; 
 }
 .homeCat .swiper-button-prev { right: 68px !important;left: inherit !important;}
 .homeCat .swiper-button-prev::before,
@@ -854,7 +854,7 @@ opacity: 1;
 
 .Product_row.productRow2 {
   display: grid;
-  gap: 16px;
+  gap: 11px;
 }
 .Product_row .swiper{padding-right: 80px !important;}
 

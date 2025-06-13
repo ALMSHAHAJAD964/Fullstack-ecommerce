@@ -7,9 +7,10 @@ const HomeCat = () => {
 
     return (
         <section className="homeCat">
-            <div className="container">
+            <div className="container overflow-hidden">
                 <h3 class="mb-3 hd">Featured Categories </h3>
-                <Swiper
+               <div>
+                 <Swiper
                     slidesPerView={10}
                     spaceBetween={5}
                     slidesPerGroup={1}
@@ -113,6 +114,7 @@ const HomeCat = () => {
                     <div className="swiper-button-next"></div>
                     <div className="swiper-button-prev"></div>
                 </Swiper>
+               </div>
             </div>
         </section>
     )
