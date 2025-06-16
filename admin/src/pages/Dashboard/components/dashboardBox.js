@@ -14,9 +14,9 @@ const DashboardBox = (props) => {
                     </div>
 
                     <div className="ml-auto">
-                        <span className="icon"></span>
+                        <span className="icon">
                         {props.icon}
-                        console.log(props.icon);
+                    </span>
                         
 
                     </div>
