@@ -9,6 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import { HiDotsVertical } from "react-icons/hi";
 import { Chart } from "react-google-charts";
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 const data = [
     ["Year", "Sales", "Expense"],
@@ -20,14 +22,18 @@ const data = [
 
 const options1 = {
     backgroundColor: "transparent",
-    'chartArea':{'width':'100%','height':'100%'}
+    chartArea: { width: "100%", height: "100%" }
 };
 
-const options = ['Last Day', 'Last week', 'Last month', 'Last Year'];
+const filterOptions = ['Last Day', 'Last week', 'Last month', 'Last Year'];
 const ITEM_HEIGHT = 48;
 
 const Dashboard = () => {
     const [anchorEl, setAnchorEl] = useState(null);
+    const [showBy, setShowBy] = useState('');
+    const [categoryBy, setCategoryBy] = useState('');
+    const [brandBy, setBrandBy] = useState('');
+    const [searchBy, setsearchBy] = useState('');
     const open = Boolean(anchorEl);
 
     const handleClick = (event) => {
@@ -41,7 +47,6 @@ const Dashboard = () => {
     return (
         <div className="right-content w-100">
             <div className="row dashboardBoxWrapperRow">
-                {/* Left Boxes */}
                 <div className="col-md-8">
                     <div className="dashboardBoxWrapper d-flex">
                         <DashboardBox color={["#1da256", "#48d483"]} icon={<FaUserCircle />} grow={true} />
@@ -51,7 +56,6 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                {/* Right Graph + Dropdown */}
                 <div className="col-md-4 pl-0">
                     <div className="box graphBox p-3 bg-dark text-white rounded">
                         <div className="d-flex align-items-center justify-content-between mb-3">
@@ -84,9 +88,7 @@ const Dashboard = () => {
                             anchorEl={anchorEl}
                             open={open}
                             onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'long-button',
-                            }}
+                            MenuListProps={{ 'aria-labelledby': 'long-button' }}
                             PaperProps={{
                                 style: {
                                     maxHeight: ITEM_HEIGHT * 4.5,
@@ -94,7 +96,7 @@ const Dashboard = () => {
                                 },
                             }}
                         >
-                            {options.map((option) => (
+                            {filterOptions.map((option) => (
                                 <MenuItem key={option} onClick={handleClose}>
                                     <IoMdTimer style={{ marginRight: '8px' }} />
                                     {option}
@@ -105,19 +107,101 @@ const Dashboard = () => {
                 </div>
             </div>
 
-
-
-
+            {/* Card with Filters */}
             <div className="card shadow border-0 p-3 mt-4">
                 <h3 className="hd">Best Selling Products</h3>
 
+                <div className="row cardfilters mt-3">
+                    {/* Show By */}
+                    <div className="col-md-3">
+                        <h6 className="font-weight-bold mb-2">SHOW BY</h6>
+                        <FormControl size="small" className="w-100">
+                            <Select
+                                value={showBy}
+                                onChange={(e) => setShowBy(e.target.value)}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Show By' }}
+                            >
+                                <MenuItem value=""><em>None</em></MenuItem>
+                                <MenuItem value="10">Ten</MenuItem>
+                                <MenuItem value="20">Twenty</MenuItem>
+                                <MenuItem value="30">Thirty</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
 
-<div className="row">
-    <div className="row">
-        <h4>SHOW BY</h4>
-    </div>
-</div>
+                    {/* Category By */}
+                    <div className="col-md-3">
+                        <h6 className="font-weight-bold mb-2">CATEGORY BY</h6>
+                        <FormControl size="small" className="w-100">
+                            <Select
+                                value={categoryBy}
+                                onChange={(e) => setCategoryBy(e.target.value)}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Category By' }}
+                            >
+                                <MenuItem value=""><em>None</em></MenuItem>
+                                <MenuItem value="10">Ten</MenuItem>
+                                <MenuItem value="20">Twenty</MenuItem>
+                                <MenuItem value="30">Thirty</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
 
+                    {/* Brand */}
+                    <div className="col-md-3">
+                        <h6 className="font-weight-bold mb-2">BRAND BY</h6>
+                        <FormControl size="small" className="w-100">
+                            <Select
+                                value={brandBy}
+                                onChange={(e) => setBrandBy(e.target.value)}
+                                displayEmpty
+                                inputProps={{ 'aria-label': 'Brand' }}
+                            >
+                                <MenuItem value=""><em>None</em></MenuItem>
+                                <MenuItem value="10">Ten</MenuItem>
+                                <MenuItem value="20">Twenty</MenuItem>
+                                <MenuItem value="30">Thirty</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+
+                    {/* Search by */}
+                    <div className="col-md-3">
+                        <h6 className="font-weight-bold mb-2">SEARCH BY</h6>
+                        <FormControl size="small" className="w-100">
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Enter keyword"
+                                value={searchBy}
+                                onChange={(e) => setsearchBy(e.target.value)}
+                            />
+                        </FormControl>
+                    </div>
+
+                </div>
+
+
+
+                <div className="table-responsive">
+                    <table className="table table-bordered">
+                         <thead className="thead-dark">
+                            <tr>
+                                <th>UID</th>
+                                <th>PRODUCT</th>
+                                <th>CATEGORY</th>
+                                <th>BRAND</th>
+                                <th>PRICE</th>
+                                <th>STOCK</th>
+                                <th>RATING</th>
+                                <th>ORDER</th>
+                                <th>SALES</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     );
