@@ -11,6 +11,10 @@ import { HiDotsVertical } from "react-icons/hi";
 import { Chart } from "react-google-charts";
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { FaEye } from "react-icons/fa6";
+import { FaPencilAlt } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+
 
 const data = [
     ["Year", "Sales", "Expense"],
@@ -184,9 +188,9 @@ const Dashboard = () => {
 
 
 
-                <div className="table-responsive">
-                    <table className="table table-bordered">
-                         <thead className="thead-dark">
+                <div className="table-responsive mt-3">
+                    <table className="table table-bordered v-align">
+                        <thead className="thead-dark">
                             <tr>
                                 <th>UID</th>
                                 <th>PRODUCT</th>
@@ -200,6 +204,32 @@ const Dashboard = () => {
                                 <th>ACTION</th>
                             </tr>
                         </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>Top and skirt set for Female</td>
+                                <td>womans</td>
+                                <td>richman</td>
+                                <td>
+                                    <del className="old">$123</del>
+                                    <span className="new text-danger" >$123</span>
+                                    </td>
+                                <td>30</td>
+                                <td>4.9(17)</td>
+                                <td>380</td>
+                                <td>$38k</td>
+                                <td>
+                                    <div className="actions d-flex alignitems-center">
+                                        <Button  className ="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className ="success"  color="success"><FaPencilAlt /></Button>
+                                        <Button  className="error" color="error"><MdDelete /></Button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
                     </table>
                 </div>
             </div>
