@@ -214,16 +214,16 @@ const Dashboard = () => {
                                 <td>
                                     <del className="old">$123</del>
                                     <span className="new text-danger" >$123</span>
-                                    </td>
+                                </td>
                                 <td>30</td>
                                 <td>4.9(17)</td>
                                 <td>380</td>
                                 <td>$38k</td>
                                 <td>
                                     <div className="actions d-flex alignitems-center">
-                                        <Button  className ="secondary" color="secondary"><FaEye /></Button>
-                                        <Button className ="success"  color="success"><FaPencilAlt /></Button>
-                                        <Button  className="error" color="error"><MdDelete /></Button>
+                                        <Button className="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className="success" color="success"><FaPencilAlt /></Button>
+                                        <Button className="error" color="error"><MdDelete /></Button>
                                     </div>
                                 </td>
 
