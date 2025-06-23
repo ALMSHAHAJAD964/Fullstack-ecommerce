@@ -14,7 +14,7 @@ import Select from '@mui/material/Select';
 import { FaEye } from "react-icons/fa6";
 import { FaPencilAlt } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-
+import { Pagination } from "@mui/material";
 
 const data = [
     ["Year", "Sales", "Expense"],
@@ -193,7 +193,7 @@ const Dashboard = () => {
                         <thead className="thead-dark">
                             <tr>
                                 <th>UID</th>
-                                <th>PRODUCT</th>
+                                <th style={{ width: '300px' }}>PRODUCT</th>
                                 <th>CATEGORY</th>
                                 <th>BRAND</th>
                                 <th>PRICE</th>
@@ -209,8 +209,13 @@ const Dashboard = () => {
                             <tr>
                                 <td>#1</td>
                                 <td>
-                                    <div className="d-flex productBox">
-                                        <div className="info">
+                                    <div className="d-flex  align-items-center productBox">
+                                        <div className="imgWrapper">
+                                            <div className="img">
+                                                <img src="https://www.shutterstock.com/shutterstock/photos/2538682431/display_1500/stock-photo-a-young-woman-is-shopping-in-a-department-store-thoughtfully-comparing-two-yellow-printed-summer-2538682431.jpg" className="w-100" />
+                                            </div>
+                                        </div>
+                                        <div className="info pl-0">
                                             <h6>Top and skirt set for Female....</h6>
                                             <p>Woman's exclusive summer tips and shirt set for Female
                                                 tops  and skirt set.
@@ -221,8 +226,10 @@ const Dashboard = () => {
                                 <td>womans</td>
                                 <td>richman</td>
                                 <td>
-                                    <del className="old">$123</del>
-                                    <span className="new text-danger" >$123</span>
+                                    <div style={{ width: '70px' }}>
+                                        <del className="old">$123</del>
+                                        <span className="new text-danger" >$123</span>
+                                    </div>
                                 </td>
                                 <td>30</td>
                                 <td>4.9(17)</td>
@@ -237,9 +244,183 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
+                            
+                           
+                        </tbody>
+                         <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>
+                                    <div className="d-flex  align-items-center productBox">
+                                        <div className="imgWrapper">
+                                            <div className="img">
+                                                <img src="https://www.shutterstock.com/shutterstock/photos/2538682431/display_1500/stock-photo-a-young-woman-is-shopping-in-a-department-store-thoughtfully-comparing-two-yellow-printed-summer-2538682431.jpg" className="w-100" />
+                                            </div>
+                                        </div>
+                                        <div className="info pl-0">
+                                            <h6>Top and skirt set for Female....</h6>
+                                            <p>Woman's exclusive summer tips and shirt set for Female
+                                                tops  and skirt set.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>womans</td>
+                                <td>richman</td>
+                                <td>
+                                    <div style={{ width: '70px' }}>
+                                        <del className="old">$123</del>
+                                        <span className="new text-danger" >$123</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                                <td>4.9(17)</td>
+                                <td>380</td>
+                                <td>$38k</td>
+                                <td>
+                                    <div className="actions d-flex alignitems-center">
+                                        <Button className="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className="success" color="success"><FaPencilAlt /></Button>
+                                        <Button className="error" color="error"><MdDelete /></Button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            
+                           
+                        </tbody>
+                         <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>
+                                    <div className="d-flex  align-items-center productBox">
+                                        <div className="imgWrapper">
+                                            <div className="img">
+                                                <img src="https://www.shutterstock.com/shutterstock/photos/2538682431/display_1500/stock-photo-a-young-woman-is-shopping-in-a-department-store-thoughtfully-comparing-two-yellow-printed-summer-2538682431.jpg" className="w-100" />
+                                            </div>
+                                        </div>
+                                        <div className="info pl-0">
+                                            <h6>Top and skirt set for Female....</h6>
+                                            <p>Woman's exclusive summer tips and shirt set for Female
+                                                tops  and skirt set.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>womans</td>
+                                <td>richman</td>
+                                <td>
+                                    <div style={{ width: '70px' }}>
+                                        <del className="old">$123</del>
+                                        <span className="new text-danger" >$123</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                                <td>4.9(17)</td>
+                                <td>380</td>
+                                <td>$38k</td>
+                                <td>
+                                    <div className="actions d-flex alignitems-center">
+                                        <Button className="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className="success" color="success"><FaPencilAlt /></Button>
+                                        <Button className="error" color="error"><MdDelete /></Button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            
+                           
+                        </tbody>
+                         <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>
+                                    <div className="d-flex  align-items-center productBox">
+                                        <div className="imgWrapper">
+                                            <div className="img">
+                                                <img src="https://www.shutterstock.com/shutterstock/photos/2538682431/display_1500/stock-photo-a-young-woman-is-shopping-in-a-department-store-thoughtfully-comparing-two-yellow-printed-summer-2538682431.jpg" className="w-100" />
+                                            </div>
+                                        </div>
+                                        <div className="info pl-0">
+                                            <h6>Top and skirt set for Female....</h6>
+                                            <p>Woman's exclusive summer tips and shirt set for Female
+                                                tops  and skirt set.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>womans</td>
+                                <td>richman</td>
+                                <td>
+                                    <div style={{ width: '70px' }}>
+                                        <del className="old">$123</del>
+                                        <span className="new text-danger" >$123</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                                <td>4.9(17)</td>
+                                <td>380</td>
+                                <td>$38k</td>
+                                <td>
+                                    <div className="actions d-flex alignitems-center">
+                                        <Button className="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className="success" color="success"><FaPencilAlt /></Button>
+                                        <Button className="error" color="error"><MdDelete /></Button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            
+                           
+                        </tbody>
+                         <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>
+                                    <div className="d-flex  align-items-center productBox">
+                                        <div className="imgWrapper">
+                                            <div className="img">
+                                                <img src="https://www.shutterstock.com/shutterstock/photos/2538682431/display_1500/stock-photo-a-young-woman-is-shopping-in-a-department-store-thoughtfully-comparing-two-yellow-printed-summer-2538682431.jpg" className="w-100" />
+                                            </div>
+                                        </div>
+                                        <div className="info pl-0">
+                                            <h6>Top and skirt set for Female....</h6>
+                                            <p>Woman's exclusive summer tips and shirt set for Female
+                                                tops  and skirt set.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>womans</td>
+                                <td>richman</td>
+                                <td>
+                                    <div style={{ width: '70px' }}>
+                                        <del className="old">$123</del>
+                                        <span className="new text-danger" >$123</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                                <td>4.9(17)</td>
+                                <td>380</td>
+                                <td>$38k</td>
+                                <td>
+                                    <div className="actions d-flex alignitems-center">
+                                        <Button className="secondary" color="secondary"><FaEye /></Button>
+                                        <Button className="success" color="success"><FaPencilAlt /></Button>
+                                        <Button className="error" color="error"><MdDelete /></Button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            
+                           
                         </tbody>
 
                     </table>
+                <div className="d-flex justify-content-start tableFooter">
+  <Pagination count={10} color="primary" className="pagination" />
+</div>
+                   
                 </div>
             </div>
         </div>
