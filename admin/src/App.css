@@ -10,6 +10,7 @@ body {
   background: #d6d5d5 !important;
 }
 
+
 /* GLOBAL SCROLLBAR */
 ::-webkit-scrollbar {
   width: 5px !important;
@@ -532,7 +533,7 @@ height: 40px !important; border-radius: 50% !important ;}
   
 font-size: 13px !important;}
 
-.table .tbody td{font-size: 13px !important;color: #403e57; font-weight: 500;}
+.table .tbody td{font-size: 14px !important;color: #403e57; font-weight: 500;}
 
 .table .tbody .actions{min-width: 32px !important; width: 32px !important ; height: 32px !important;
 margin: 0px 3px !important;}
@@ -542,4 +543,16 @@ margin: 0px 3px !important;}
 .table .tbody .actions button svg{font-size: 32px !important;}
 .table.v-align td{vertical-align: middle !important;}
 .table td .old,.table td .old{display: block; width: 100%;}
+.table td .info .h6{overflow: hidden;
+text-overflow: ellipsis;  white-space: nowrap;
+font-size: 14px;
+font-weight: 600;
+width: 100px; } 
+
+.table td .info p{font-size: 13px;
+line-height: 18px; overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap; columns: #5e5d72; margin-bottom: 0px;}
+.table.v-align td .productBox{width: 150px;}
+.table.v-align td .productBox .info{ width: 100%;}
 

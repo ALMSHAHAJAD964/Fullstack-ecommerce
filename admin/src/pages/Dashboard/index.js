@@ -208,7 +208,16 @@ const Dashboard = () => {
                         <tbody>
                             <tr>
                                 <td>#1</td>
-                                <td>Top and skirt set for Female</td>
+                                <td>
+                                    <div className="d-flex productBox">
+                                        <div className="info">
+                                            <h6>Top and skirt set for Female....</h6>
+                                            <p>Woman's exclusive summer tips and shirt set for Female
+                                                tops  and skirt set.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
                                 <td>womans</td>
                                 <td>richman</td>
                                 <td>
