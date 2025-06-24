@@ -417,8 +417,9 @@ const Dashboard = () => {
                         </tbody>
 
                     </table>
-                <div className="d-flex justify-content-start tableFooter">
-  <Pagination count={10} color="primary" className="pagination" />
+                <div className="d-flex justify-content-end tableFooter">
+  <Pagination count={10} color="primary" className="pagination" 
+  showFirstButton showLastButton/>
 </div>
                    
                 </div>
