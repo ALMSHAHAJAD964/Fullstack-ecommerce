@@ -244,10 +244,10 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
-                            
-                           
+
+
                         </tbody>
-                         <tbody>
+                        <tbody>
                             <tr>
                                 <td>#1</td>
                                 <td>
@@ -286,10 +286,10 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
-                            
-                           
+
+
                         </tbody>
-                         <tbody>
+                        <tbody>
                             <tr>
                                 <td>#1</td>
                                 <td>
@@ -328,10 +328,10 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
-                            
-                           
+
+
                         </tbody>
-                         <tbody>
+                        <tbody>
                             <tr>
                                 <td>#1</td>
                                 <td>
@@ -370,10 +370,10 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
-                            
-                           
+
+
                         </tbody>
-                         <tbody>
+                        <tbody>
                             <tr>
                                 <td>#1</td>
                                 <td>
@@ -412,16 +412,19 @@ const Dashboard = () => {
                                 </td>
 
                             </tr>
-                            
-                           
+
+
                         </tbody>
 
                     </table>
-                <div className="d-flex justify-content-end tableFooter">
-  <Pagination count={10} color="primary" className="pagination" 
-  showFirstButton showLastButton/>
-</div>
-                   
+
+
+
+                    <div className="d-flex justify-content-end tableFooter">
+                        <p>showing <b>12</b> of <b>70</b> results</p>
+                        <Pagination count={10} color="primary" className="pagination"
+                            showFirstButton showLastButton />
+                    </div>
                 </div>
             </div>
         </div>

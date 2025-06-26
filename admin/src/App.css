@@ -563,6 +563,8 @@ white-space: nowrap; columns: #5e5d72; margin-bottom: 0px;}
 .tableFooter{padding-bottom: 20px;}
 .tableFooter.pagination{margin-left: auto;}
 
+.tableFooter p{font-size: 14px; font-weight: 500; margin-bottom: 0px;  text-align: right;  }
+
 
 
 
