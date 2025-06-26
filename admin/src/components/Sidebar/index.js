@@ -14,13 +14,15 @@ import { GiSpikyField } from "react-icons/gi";
 import { Link } from '@mui/material';
 import { useState } from 'react';
 import { IoMdLogOut } from 'react-icons/io'
+import { MyContext } from '../../App';
 
 const Sidebar = () => {
     const [actvieTab, setActiveTab] = useState(0);
     const [isToggleSubmenu, setisToggleSubmenu] = useState(false);
 
-    console.log(actvieTab === 1 && isToggleSubmenu === true, '----------');
 
+
+ const context = useState(MyContext);
     const isOpenSubmeun = (index) => {
         setActiveTab(index)
         setisToggleSubmenu(!isToggleSubmenu)

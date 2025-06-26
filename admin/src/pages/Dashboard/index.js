@@ -16,6 +16,7 @@ import { FaPencilAlt } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Pagination } from "@mui/material";
 
+
 const data = [
     ["Year", "Sales", "Expense"],
     ["2013", 1000, 400],
@@ -420,7 +421,7 @@ const Dashboard = () => {
 
 
 
-                    <div className="d-flex justify-content-end tableFooter">
+                    <div className="d-flex justify-content-between tableFooter">
                         <p>showing <b>12</b> of <b>70</b> results</p>
                         <Pagination count={10} color="primary" className="pagination"
                             showFirstButton showLastButton />
